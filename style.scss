@@ -1,0 +1,335 @@
+@import url(https://fonts.googleapis.com/css?family=Commissioner:100,200,300,regular,500,600,700,800,900);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Commissioner';
+}
+$venus-color: #F89555;
+$aqua-color: #8CB3FF;
+body {
+    background-image: url("../img/bg.png");
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+
+}
+html,
+body {
+    scroll-behavior: smooth;
+}
+.song {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 2.1em;
+    font-family: "Roboto";
+}
+.pause {
+    margin-left: 0.5em;
+    cursor:pointer;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-planet-href {
+        color: #fff;
+        font-weight: 400;
+        position: relative;
+        left: -50px;
+        font-size: 20px;
+        display: flex;
+        padding: 5px 8px 5px 0px;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        background: rgba(217, 217, 217, 0.05);
+        backdrop-filter: blur(7.5px);
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: 10px;
+        text-decoration: none;
+        img {
+            transition: transform .3s;
+            margin-left: -8px;
+            height: 70px;
+
+        }
+        span {
+           
+            z-index: 3;
+        }
+        @keyframes planet {
+            0%,100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        &:hover {
+            img {
+                animation: planet .3s;
+            }
+        }
+    }
+}
+.header {
+    height: 1000px;
+    position: relative;
+    .href-to-3d {
+        position: absolute;
+        bottom: 170px;
+        left: 500px;
+        background: rgba(217, 217, 217, 0.05);
+        backdrop-filter: blur(7.5px);
+        /* Note: backdrop-filter has minimal browser support */
+        
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 20px;
+        span {
+            color: $aqua-color;
+        }
+        &:hover {
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+    .header-container {
+        display: flex;
+        justify-content: center;
+        margin-left: 440px;
+    }
+    
+    .header-planet {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .text-block {
+        align-self: center;
+        margin-top: 30px;
+        .__title {
+            font-weight: 400;
+            font-size: 70px;
+            line-height: 98px;
+            text-align: center;
+            
+            color: $venus-color;
+            &::after {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 1px;
+                background-color: #fff;
+                margin: 0 auto;
+            }
+        }
+        .__title-sec {
+            font-weight: 300;
+            font-size: 35px;
+            line-height: 49px;
+            text-align: center;
+            
+            color: #8CB3FF;
+        }
+        .__sub-title {
+            font-weight: 200;
+            font-size: 25px;
+            line-height: 32px;
+            text-align: center;
+            
+            color: #FFFFFF;
+            max-width: 470px;
+            width: 100%;
+            margin: 25px 0;
+        }
+        .__info-block {
+            background: rgba(217, 217, 217, 0.05);
+            backdrop-filter: blur(7.5px);
+            width: 100%;
+            padding: 5px;
+            height: 70px;
+            margin: 15px 0 0 0;
+            .__title-info {
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 24px;
+                text-align: center;
+                
+                color: #F89555;
+            }
+            .__sub-title-info {
+                font-weight: 200;
+                font-size: 25px;
+                line-height: 37px;
+                text-align: center;
+                
+                color: #fff;
+                span {
+                    color: $aqua-color;
+                }
+            }
+        }
+        .__info-block_small:nth-child(7) {
+            margin-top: 20px;
+        }
+        .__info-block_small {
+            background: rgba(217, 217, 217, 0.05);
+            backdrop-filter: blur(7.5px);
+            border-radius: 20px;
+            padding: 13px;
+            width: 100%;
+
+            font-weight: 200;
+            font-size: 15px;
+            line-height: 24px;
+            text-align: center;
+            
+            color: #FFFFFF;
+            margin-top: 10px;
+            
+            span:first-child {
+                color: $venus-color;
+            }
+            span:last-child {
+                color: $aqua-color;
+            }
+        }
+    }
+}
+.swiper-main__title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    
+    color: #fff;
+    span:first-child {
+        color: $aqua-color;
+    }
+    span:last-child {
+        color: $venus-color;
+    }
+}
+.swiper-container {
+    position: relative;
+    width: 1120px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+.mySwiper {
+    width: 1000px;
+    height: 550px;
+    background: rgba(217, 217, 217, 0.05);
+    backdrop-filter: blur(7.5px);
+}
+.swiper-slide {
+    display: flex !important;
+    justify-content: space-between;
+    .text-block {
+        .__head {
+            background: rgba(217, 217, 217, 0.05);
+            backdrop-filter: blur(7.5px);
+            width: 100%;
+            height: 140px;
+            display: flex;
+            justify-content: center;
+            .num {
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-weight: 300;
+                font-size: 50px;
+                line-height: 61px;
+                background: rgba(217, 217, 217, 0.05);
+                backdrop-filter: blur(7.5px);
+            }
+            .__title {
+                font-weight: 300;
+                font-size: 30px;
+                line-height: 37px;              
+                text-align: center;
+                
+                color: #FFFFFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 90px;
+            }
+        }
+        .__sub-title {
+            font-weight: 200;
+            font-size: 30px;
+            line-height: 37px;
+            text-align: center;
+            
+            color: #FFFFFF;
+            margin: 50px 0 0 0;
+            padding: 0 25px;
+        }
+    }
+}
+.swiper-button-next, .swiper-button-prev {
+    width: 30px !important;
+    height: 20px !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: '';
+    opacity: 0;
+}
+.about_title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 70px;
+}
+
+.bg_p {
+    background: rgba(217, 217, 217, 0.05);
+    backdrop-filter: blur(7.5px);
+    max-width: 1240px;
+    width: 100%;
+    height: auto;
+    padding: 90px 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.color {
+    color: $venus-color;
+}

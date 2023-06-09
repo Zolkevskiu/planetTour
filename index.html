@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/venus-slide1.png" type="image/x-icon">
+    <title>Earth</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Commissioner:100,200,300,regular,500,600,700,800,900);
+    *{
+        font-family: "Commissioner";
+        padding: 0%;
+        margin: 0%;
+    }
+    body {
+        background-color: black;
+    } 
+    h3{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 37px;
+        /* identical to box height */
+       
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+    a img{
+        margin: 0 15px;
+
+    }
+    a {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        bottom: 60px;
+        text-align: center;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    span{
+        position: relative;
+        color: #8CB3FF;
+        margin-left: 10px;
+    }
+    h3 span::before{
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @keyframes identifier {
+        0%,100% {
+            bottom: 70px;
+        }
+        50% {
+            bottom: 60px;
+        }
+    }
+    .link_container{
+        position: absolute;
+        left:50%;
+        transform:translateX(-50%);
+        bottom: 60px;
+        animation: identifier 2s infinite;
+    }
+    h1 span::before{
+        content: '';
+        display: block;
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        left: -13px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        height: auto;
+        width: 100%;
+    }
+    body {
+        overflow: hidden;
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 61px;
+        text-align: center;
+        margin: 260px 0 0 0;
+       
+        color: #FFFFFF;
+    }
+    .img-ar-sec {
+        transform: rotate(180deg);
+    }
+    </style>
+</head>
+<body>
+    <h1 data-aos="fade-down"> TOUR <span>PLANETS</span> </h1>
+    <h3 data-aos="fade-up">ТУР <span>ПЛАНЕТИ</span></h3>
+    <div class="link_container"><a href="venus.html"> <img src="Arrow.svg" alt=""> НАТИСНІТЬ ЩОБ ПОЧАТИ <img src="Arrow.svg" alt="" class="img-ar-sec"> </a></div>
+    <video src="Earth.mp4" autoplay muted loop>
+    </video> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>window.addEventListener("click", ()=> {window.location.replace("venus.html");})</script>
+</body>
+</html>

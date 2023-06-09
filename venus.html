@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/venys-planeta.png" type="image/x-icon">
+    <title>Venus</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <img src="img/logo.svg" alt="logo" class="logo">
+            <a href="uranus.html" class="navbar-planet-href"><span>URANUS</span> <img src="img/uranus-small.png" alt=""></a>
+        </nav>
+        <div class="header-container">
+            <img src="img/venys-planeta.png" alt="" data-aos="fade-right" class="header-planet" style="height: 1000px;">
+            <div class="text-block" data-aos="fade-left">
+                <h1 class="__title">Venus</h1>
+                <h2 class="__title-sec">Венера</h2>
+                <p class="__sub-title">Подібна за структурою та розміром до Землі, товста атмосфера Венери затримує тепло внаслідок парникового ефекту, що робить її найгарячішою планетою в нашій Сонячній системі.</p>
+                <div class="__info-block" data-tilt>
+                    <h3 class="__title-info">ТРИВАЛІСТЬ РОКУ</h3>
+                    <p class="__sub-title-info"><span id="count1">225</span> Земних днів</p>
+                </div>
+                <div class="__info-block" data-tilt>
+                    <h3 class="__title-info">ВІДСТАНЬ ВІД СОНЦЯ</h3>
+                    <p class="__sub-title-info">107 936 346<span>км</span></p>
+                </div>
+                <div class="__info-block" data-tilt>
+                    <h3 class="__title-info">ТИП ПЛАНЕТИ</h3>
+                    <p class="__sub-title-info"><span>НАЗЕМНИЙ</span></p>
+                </div>
+                <div class="__info-block_small" data-tilt><span>Об'єм:</span> 9,38× 1011 км³ 0,857 <span>земного</span></div>
+                <div class="__info-block_small" data-tilt><span>Маса:</span> 4,8685× 1024 кг 0,815 <span>земної</span></div>
+            </div>
+        </div>
+        <a href="#3dModel" class="href-to-3d"><span>3D</span> Перегляд</a>
+    </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        function counter(id, start, end, duration) {
+        let obj = document.getElementById(id),
+        current = start,
+        range = end - start,
+        increment = end > start ? 1 : -1,
+        step = Math.abs(Math.floor(duration / range)),
+        timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+            clearInterval(timer);
+            }
+        }, step);
+        }
+        counter("count1", 0, 225, 3000);
+        });
+    </script>
+    <h1 class="swiper-main__title"><span>7 фактів</span>, які потрібно знати про <span>Венеру</span></h1>
+    <div class="swiper-container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="text-block">
+                    <div class="__head">
+                        <span class="num">1</span>
+                        <h2 class="__title">ТОКСИЧНИЙ БЛИЗНЮК</h2>
+                    </div>
+                    <p class="__sub-title">Венеру часто називають «двійником Землі», оскільки вони схожі за розміром і структурою, але поверхня Венери надзвичайно нагріта, а атмосфера щільна, токсична. Якби Сонце було таким же високим, як звичайні вхідні двері, Земля і Венера були б приблизно з нікель.</p>
+                </div>
+                <img src="img/venus-slide1.png" alt="info-img">
+              </div>
+              <div class="swiper-slide">
+                <div class="text-block">
+                    <div class="__head">
+                        <span class="num">2</span>
+                        <h2 class="__title">РІЗНОМАНІТНИЙ РЕЛЬЄФ</h2>
+                    </div>
+                    <p class="__sub-title">Венера має тверду поверхню, вкриту куполоподібними вулканами, рифтами та горами, з великими вулканічними рівнинами та великими хребтовими плато.</p>
+                </div>
+                <img src="img/venus-slide2.png" alt="info-img">
+              </div>
+              <div class="swiper-slide">
+                <div class="text-block">
+                    <div class="__head">
+                        <span class="num">3</span>
+                        <h2 class="__title">ЗВОРОТНІЙ СХІД СОНЦЯ</h2>
+                    </div>
+                    <p class="__sub-title">Венера обертається навколо своєї осі назад порівняно з більшістю планет нашої Сонячної системи. Це означає, що Сонце сходить на заході і заходить на сході, протилежно від того, що ми бачимо на Землі.</p>
+                </div>
+                <img src="img/venus-slide3.png" alt="info-img">
+              </div>
+              <div class="swiper-slide">
+                <div class="text-block">
+                    <div class="__head">
+                        <span class="num">4</span>
+                        <h2 class="__title">СМЕРДЮЧІ ХМАРИ</h2>
+                    </div>
+                    <p class="__sub-title">Венера постійно оповита густими токсичними хмарами сірчаної кислоти, які починаються на висоті від 28 до 43 миль (45-70 кілометрів). Хмари пахнуть тухлими яйцями!</p>
+                </div>
+                <img src="img/venus-slide4.png" alt="info-img">
+              </div>
+              <div class="swiper-slide">
+                <div class="text-block">
+                    <div class="__head">
+                        <span class="num">5</span>
+                        <h2 class="__title">ТЕПЛИЦЯ</h2>
+                    </div>
+                    <p class="__sub-title">Товста атмосфера Венери затримує тепло, створюючи парниковий ефект, що робить її найгарячішою планетою в нашій Сонячній системі з температурою поверхні, достатньою для розплавлення свинцю. Парниковий ефект робить Венеру приблизно на 700°F (390°C) гарячішою, ніж це було б без парникового ефекту.</p>
+                </div>
+                <img src="img/venus-slide5.png" alt="info-img">
+              </div>
+              <div class="swiper-slide">
+                <div class="text-block">
+                    <div class="__head">
+                        <span class="num">6</span>
+                        <h2 class="__title">МАГНІТ КОСМІЧНОГО КОРАБЛЯ</p>
+                    </div>
+                    <p class="__sub-title">Венера була першою планетою, дослідженою космічним кораблем, і її інтенсивно вивчали на початку історії дослідження космосу. Венера також була першою планетою, поверхні якої досяг космічний корабель із Землі. Сильна спека означає, що посадкові модулі вижили лише пару годин.</p>
+                </div>
+                <img src="img/venus-slide6.png" alt="info-img">
+                </div>
+              <div class="swiper-slide">
+                <div class="text-block">
+                    <div class="__head">
+                        <span class="num">7</span>
+                        <h2 class="__title">ЖИТТЯ НА ВЕНЕРІ</h2>
+                    </div>
+                    <p class="__sub-title">Венера є малоймовірним місцем для життя, як ми її знаємо, але деякі вчені припускають, що мікроби можуть існувати високо в хмарах, де холодніше, а тиск подібний до земного. У хмарах спостерігали фосфін, можливий індикатор життя мікробів.</p>
+                </div>
+                <img src="img/venus-slide7.png" alt="info-img">
+              </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <h2 class="about_title"> Ще про <span class="color">Венеру</span> </h2>
+    <div class="bg_p" data-aos="zoom-in-up"><p>Венера є другою планетою від Сонця і є найближчим планетарним сусідом Землі. Це одна з чотирьох внутрішніх планет земної групи (або скелястих), і її часто називають двійником Землі, оскільки вона схожа за розміром і щільністю. Однак це не однояйцеві близнюки – між двома світами є радикальні відмінності.</p></div>
+    <div class="bg_p" data-aos="zoom-in-up"><p>Венера має густу токсичну атмосферу, наповнену вуглекислим газом, і вона постійно оповита густими жовтуватими хмарами сірчаної кислоти, які затримують тепло, викликаючи парниковий ефект. Це найгарячіша планета в нашій Сонячній системі, хоча Меркурій знаходиться ближче до Сонця. Температура на поверхні Венери становить близько 900 градусів за Фаренгейтом (475 градусів за Цельсієм) – достатньо високої температури, щоб розплавити свинець. Поверхня має іржавий колір і всіяна інтенсивно хрусткими горами та тисячами великих вулканів. Вчені вважають, що, можливо, деякі вулкани все ще активні.</p></div>
+    <div class="bg_p" data-aos="zoom-in-up"><p>Венера має нищівний тиск повітря на своїй поверхні – більш ніж у 90 разів перевищує земний – подібний тиску, який ви відчуваєте на милі нижче океану на Землі.</p></div>
+    <div class="bg_p" data-aos="zoom-in-up"><p>Ще одна велика відмінність від Землі – Венера обертається навколо своєї осі назад, порівняно з більшістю інших планет Сонячної системи. Це означає, що на Венері Сонце сходить на заході і заходить на сході, протилежно тому, що ми відчуваємо на Землі. (Це не єдина планета в нашій Сонячній системі з таким дивним обертанням – Уран крутиться на боці .)</p></div>
+    <div class="bg_p" data-aos="zoom-in-up"><p>Венера була першою планетою, яку дослідив космічний корабель. 14 грудня 1962 року NASA Mariner 2 успішно пролетів і просканував захмарений світ. Відтоді численні космічні апарати США та інших космічних агентств досліджували Венеру, включаючи NASA. Магеллан , який наносив на карту поверхню планети за допомогою радара. Радянські космічні апарати здійснили найуспішнішу посадку на поверхню Венери на сьогоднішній день, але вони не проіснували довго через надзвичайну спеку та нищівний тиск. Американський зонд, один із Pioneer Venus Multiprobes NASA , вижив близько години після</p></div>
+    <div id="3dModel" class="sketchfab-embed-wrapper" style="display: flex; margin-top: 70px;"> <iframe style="margin: 0 auto; display: block;" title="Venus" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="1200" height="650" src="https://sketchfab.com/models/b306aaadbf2b4fcea1afa2db5ed75b4f/embed"> </iframe> <p style="display: none;"> <a href="https://sketchfab.com/3d-models/venus-b306aaadbf2b4fcea1afa2db5ed75b4f?utm_medium=embed&utm_campaign=share-popup&utm_content=b306aaadbf2b4fcea1afa2db5ed75b4f" target="_blank" rel="nofollow" style="font-weight: bold; color: rgb(28, 170, 217, 0);"> Venus </a> by <a href="https://sketchfab.com/minecraftnorge?utm_medium=embed&utm_campaign=share-popup&utm_content=b306aaadbf2b4fcea1afa2db5ed75b4f" target="_blank" rel="nofollow" style="font-weight: bold; color: rgb(28, 170, 217, 0);"> kongle </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=b306aaadbf2b4fcea1afa2db5ed75b4f" target="_blank" rel="nofollow" style="font-weight: bold; color: rgb(28, 170, 217, 0);">Sketchfab</a></p></div>
+    
+    <div class="song">
+        <div class="pause" onclick="togglePlay()">🔇</div>
+        <div class="player">
+            <audio class="audio" src="venus.mp3" autoplay type="audio" loop=""></audio>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="vanila.js"></script>
+    <script>
+        var pause = document.querySelector(".pause");
+        var audio = document.querySelector(".audio");
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                pause.innerHTML = "🔇";
+            } else {
+                audio.pause();
+                pause.innerHTML = "🔊";
+                pause.style.color = " #848484";
+            }
+        }
+      </script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
